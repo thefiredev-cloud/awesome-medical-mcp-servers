@@ -1,0 +1,14 @@
+sequenceDiagram
+  autonumber
+  actor c as Contributor
+  participant fork as Contributor's fork
+  participant repo as This repo
+  actor m as Maintainer
+  c->>fork: fork, branch, edit README.md
+  c->>repo: open pull request
+  m->>repo: review: format, alphabetical order, working link
+  alt accepted
+    m->>repo: merge
+  else changes needed
+    m-->>c: request changes
+  end

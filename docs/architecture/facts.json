@@ -1,0 +1,31 @@
+{
+ "repo": "awesome-medical-mcp-servers",
+ "files_tracked": 3,
+ "head": "6eb634d41e1327d1aaf8e697bf06f56114c0fcf2",
+ "origin": "https://github.com/thefiredev-cloud/awesome-medical-mcp-servers.git",
+ "default_branch": "main",
+ "languages": [
+  [
+   ".md",
+   2
+  ]
+ ],
+ "readme": "README.md",
+ "readme_first_paragraph": "- [Awesome-Medical-MCP-Servers ](#awesome-medical-mcp-servers-) - [What is MCP?](#what-is-mcp) - [Tutorials](#tutorials) - [Servers](#servers) - [Acknowledgements](#acknowledgements)",
+ "top_dirs": [],
+ "manifests": [],
+ "libs": [],
+ "entry_points": [],
+ "services": [],
+ "deploy_targets": [],
+ "ci_workflows": [],
+ "cron_and_timers": [],
+ "files_scanned": 0,
+ "external_hosts": [],
+ "env_var_names": [],
+ "ci_secret_names": [],
+ "data_store_signals": {},
+ "auth_signals": {},
+ "tests": [],
+ "docs_files": []
+}
