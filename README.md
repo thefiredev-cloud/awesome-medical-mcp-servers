@@ -35,6 +35,30 @@ A collection of Medical MCP servers.
 - [chia-health/chia-mcp](https://github.com/chia-health/chia-mcp) - The first MCP server that lets AI agents handle the entire prescription journey for their users. From finding the right medication to completing intake, signing consents, paying via Stripe ACP, and tracking delivery. Every intake is reviewed and approved by a US-licensed provider, medications delivered from FDA-regulated pharmacies. 30 tools, GLP-1 weight loss (semaglutide, tirzepatide) and longevity treatments. HIPAA-compliant, all 50 states. Remote streamable HTTP server at https://mcp.chia.health/.
 - [erinheit451/supplement-advisor-mcp](https://github.com/erinheit451/supplement-advisor-mcp) - An MCP server for evidence-based dietary supplement guidance: cost-per-effective-dose recommendations, form/bioavailability comparisons, medication-nutrient interaction checks, and clinical dosing with PubMed citations.
 
+<!-- arch:begin -->
+## Architecture
+
+A curated Markdown list of Model Context Protocol servers for medicine, maintained by pull request.
+
+```mermaid
+flowchart LR
+  contrib(["Contributor"]):::actor
+  list[("README.md<br/>the curated list")]:::store
+  maint(["Maintainer"]):::actor
+  reader(["Reader<br/>MCP user"]):::actor
+  servers{{"Listed servers<br/>other repos"}}:::ext
+  contrib -->|"pull request"| list
+  maint -->|"merges"| list
+  reader -->|"reads"| list
+  list -->|"links"| servers
+  classDef actor fill:#fde68a,stroke:#b45309,color:#111827
+  classDef ext fill:#e5e7eb,stroke:#4b5563,color:#0b1220,stroke-dasharray:4 3
+  classDef store fill:#bbf7d0,stroke:#15803d,color:#0b1220
+```
+
+[Full architecture](docs/ARCHITECTURE.md) · Hi-res: [SVG](docs/architecture/whiteboard.svg) · [PNG 3x](docs/architecture/whiteboard@3x.png) · [dark PNG](docs/architecture/whiteboard.dark@3x.png) · [Explorable (Archify)](docs/architecture/awesome-medical-mcp-servers.archify.html) · [Graphify report](docs/architecture/graphify/GRAPH_REPORT.md)
+<!-- arch:end -->
+
 ## Acknowledgements
 
 - [@punkpeye](https://github.com/punkpeye) for creating the original [awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) repository.

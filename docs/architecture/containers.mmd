@@ -1,0 +1,18 @@
+flowchart LR
+  contrib(["Contributor"]):::actor
+  reader(["Reader / MCP user"]):::actor
+  maint(["Maintainer"]):::actor
+  servers{{"Listed servers (other repos)"}}:::ext
+  subgraph SYSTEM["awesome-medical-mcp-servers"]
+    list[("README.md<br/>Markdown list")]:::store
+    guide["CONTRIBUTING.md<br/>Markdown"]:::doc
+  end
+  contrib -->|"PR edits"| list
+  maint -->|"review + merge"| list
+  reader -->|"reads"| list
+  list -.->|"links to"| servers
+  contrib -->|"follows"| guide
+  classDef actor fill:#fde68a,stroke:#b45309,color:#111827
+  classDef doc fill:#fed7aa,stroke:#c2410c,color:#0b1220
+  classDef ext fill:#e5e7eb,stroke:#4b5563,color:#0b1220,stroke-dasharray:4 3
+  classDef store fill:#bbf7d0,stroke:#15803d,color:#0b1220

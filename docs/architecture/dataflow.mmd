@@ -1,0 +1,13 @@
+flowchart LR
+  list[("README.md")]:::store
+  servers{{"Listed servers (other repos)"}}:::ext
+  reader(["Reader / MCP user"]):::actor
+  contrib(["Contributor"]):::actor
+  maint(["Maintainer"]):::actor
+  contrib -->|"PR edits"| list
+  maint -->|"review + merge"| list
+  reader -->|"reads"| list
+  list -.->|"links to"| servers
+  classDef actor fill:#fde68a,stroke:#b45309,color:#111827
+  classDef ext fill:#e5e7eb,stroke:#4b5563,color:#0b1220,stroke-dasharray:4 3
+  classDef store fill:#bbf7d0,stroke:#15803d,color:#0b1220
